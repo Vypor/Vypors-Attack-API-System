@@ -1,6 +1,6 @@
 use IO::Socket::INET;
 
-my @servers = ('1.1.1.1', '2.2.2.2);
+my @servers = ('1.1.1.1', '2.2.2.2');
 my $port = "7777";
 my $logfile = ".api.log";
 
