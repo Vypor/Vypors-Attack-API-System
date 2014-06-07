@@ -1,7 +1,7 @@
 API-ATTACK-SYSTEM
 ========================
 
-No depednacys (Just perl and PHP).
+No dependencies (Just perl and PHP).
 Simple to setup
 Uses Sockets
 
