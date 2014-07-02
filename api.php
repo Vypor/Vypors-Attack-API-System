@@ -12,10 +12,10 @@ if(!isset($_GET['user'])){ $user = crypt(time()); }
 
     
 if($method == "stop"){
-	echo exec('perl client.pl "'.$_GET['user'].' stop'.'"');
+	echo exec('perl client.pl "'.$user.' stop'.'"');
 	echo "Stopped";
 } else{
-	echo exec('perl client.pl "'.$_GET['user'].' '.$_GET['method'].' '.$_GET['host'].' '.$_GET['port'].' '.$_GET['time'].'"');
+	echo exec('perl client.pl "'.$user.' '.$method.' '.$host.' '.$port.' '.$hello.'"');
 	echo "Sent; Ran ''";
 }
 
